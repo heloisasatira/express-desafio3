@@ -63,9 +63,21 @@ app.get('/req', (req, res) => {
     res.send('Yo!');
 });
 
-// Novo endpoint /meunome
-app.get('/meunome', (req, res) => {
-    res.send.json("Caterpie", "Pidgeot", "Squirtle", "Aipom", "Lapras", "Goodra", "Primeape", "Greninja", "Naganadel");
+// Novo endpoint /pokemons
+app.get('/pokemons', (req, res) => {
+    const pokemons = [
+        "Caterpie",
+        "Pidgeotto",
+        "Bulbasaur",
+        "Charmander",
+        "Squirtle",
+        "Butterfree",
+        "Primeape",
+        "Muk",
+        "Krabby",
+        "Tauros"
+    ];
+    res.json(pokemons);
 });
 
 app.listen(port, () => console.log(`listening on port ${port}!`));
