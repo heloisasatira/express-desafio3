@@ -64,7 +64,7 @@ app.get('/req', (req, res) => {
 });
 
 // Novo endpoint /pokemons
-app.get('/pokemons',isAuthorized, (req, res) => {
+app.get('/pokemons', (req, res) => {
     const pokemons = [
         "Caterpie",
         "Pidgeotto",
