@@ -2,16 +2,6 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-function isAuthorized(req, res, next) {
-  const authHeader = req.headers.authorization;
-
-  if (!authHeader || authHeader !== 'secretpassword') {
-    return res.status(401).send('Unauthorized: Access Denied');
-  }
-
-  next();
-}
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
